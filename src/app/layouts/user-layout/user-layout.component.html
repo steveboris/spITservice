@@ -1,0 +1,10 @@
+<div class="wrapper">
+    <div class="header">
+        <app-header></app-header>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+<footer class="footer">
+    <app-footer *ngIf="isHomepage"></app-footer>
+    <app-footer2 *ngIf="!isHomepage"></app-footer2>
+</footer>

@@ -1,4 +1,114 @@
-@import "~bootstrap/dist/css/bootstrap.css";
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.color-purple {
+  color:  #c01ff3;
+}
+
+.bg-purple {
+  background: #c01ff3 !important;
+}
+
+.br-white {
+  border-radius: 10px 10px 10px 10px;
+  border: 2px solid #fff;
+}
+
+.title-purple {
+  color: #3e3e3e;
+  border: 2px solid #c01ff3 ;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 16px;
+  position: relative;
+  padding: 0 20px;
+  min-height: 33px;
+  line-height: 32px;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.title-white {
+  color: #3e3e3e;
+  border: 2px solid #fff;
+  background: #fff;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 16px;
+  position: relative;
+  padding: 0 20px;
+  min-height: 33px;
+  line-height: 32px;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.font-weight-300 {
+  font-weight: 300;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-800 {
+  font-weight: 800;
+}
+
+.font-weight-900 {
+  font-weight: 900;
+}
+
+.text-sky-bleu {
+  color: #B0E2FF;
+}
+
+.size-12 {
+  font-size: 12px !important;
+}
+
+.size-14 {
+  font-size: 14px !important;
+}
+
+.size-16 {
+  font-size: 16px !important;
+}
+
+.size-18 {
+  font-size: 18px !important;
+}
+
+.size-20 {
+  font-size: 20px !important;
+}
+
+.size-22 {
+  font-size: 22px !important;
+}
+
+.size-24 {
+  font-size: 24px !important;
+}
+
+/* Buttons */
+.btn-radius {
+  border-radius: 10px 10px 10px 10px;
+}
+
+.btn-purple {
+  background-color: #c01ff3;
+  color: #fff;
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #000000;
+}
+

@@ -5,9 +5,18 @@ interface User {
   name: string;
   job: string;
   description: string;
-  portfolio: string;
-  github: string;
-  linkedIn: string;
+  portfolio: {
+    text: string,
+    link: string
+  };
+  github: {
+    text: string,
+    link: string
+  };
+  linkedIn: {
+    text: string,
+    link: string
+  };
 }
 @Component({
   selector: 'app-home',
@@ -17,64 +26,102 @@ interface User {
 export class HomeComponent implements OnInit {
   public profiles:User[];
   public user1: User = {
-    picture: 'https://mdbcdn.b-cdn.net/img/new/avatars/2.webp',
-    name: 'Name',
-    job: 'Job',
+    picture: '../../../assets/img/user.png',
+    name: 'PASCAL NANSSE',
+    job: 'CEO & FOUNDER',
     description:
-      'Invidunt lorem justo sanctus clita. Erat lorem labore ea, ' +
-      'justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea ' + 
-      'justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor',
-    github: 'Follow me on Github',
-    linkedIn: 'Follow me on LinkedIn',
-    portfolio: 'Über mich'
+      'Ich bin IT Berater (Hardware, Software) und helfen' +
+      'ihnen auch bei der Digitalisierung und Automatisierung von Geschäftsprozessen.',
+    github: {
+      text: 'Github',
+      link: 'https://github.com'
+    },
+    linkedIn: {
+      text: 'LinkedIn',
+      link: 'https://linkedin.com'
+    },
+    portfolio:{
+      text: 'Profile',
+      link: '#'
+    }
   };
 
   public user2: User = {
-    picture: 'https://mdbcdn.b-cdn.net/img/new/avatars/2.webp',
-    name: 'Name',
-    job: 'Job',
+    picture: '../../../assets/img/user.png',
+    name: 'STEVE TITINANG',
+    job: 'CEO & FOUNDER',
     description:
       'Invidunt lorem justo sanctus clita. Erat lorem labore ea, ' +
-      'justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea ' + 
+      'justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea ' +
       'justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor',
-    github: 'Follow me on Github',
-    linkedIn: 'Follow me on LinkedIn',
-    portfolio: 'Über mich'
+      github: {
+        text: 'Github',
+        link: 'https://github.com/steveboris'
+      },
+      linkedIn: {
+        text: 'LinkedIn',
+        link: 'https://linkedin.com'
+      },
+      portfolio:{
+        text: 'Profile',
+        link: '#'
+      }
   };
 
   /**What we do */
   public cards = [
     {
-      img: 'https://mdbcdn.b-cdn.net/img/new/avatars/2.webp',
+      img: '../../../assets/img/development.png',
       title: 'Apps & Software Entwicklung',
       text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       link: '#'
     },
     {
-      img: 'https://mdbcdn.b-cdn.net/img/new/avatars/2.webp',
+      img: '../../../assets/img/web-design.png',
       title: 'Webentwicklung',
       text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       link: '#'
     },
     {
-      img: 'https://mdbcdn.b-cdn.net/img/new/avatars/2.webp',
+      img: '../../../assets/img/computer.png',
+      title: 'IT-Sicherheit',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      link: '#'
+    },
+    {
+      img: '../../../assets/img/video-call.png',
       title: 'Consulting',
       text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       link: '#'
     }
   ]
 
-  /** Why us */
-  public itemlist = [
-    'Cras justo odio',
-    'Dapibus ac facilisis in',
-    'Morbi leo risus',
-    'Dapibus ac facilisis in',
-    'Cras justo odio',
-    'Morbi leo risus'
-  ]
+  //feedback
+  feedbacks = [
+    {
+      name: "Robert Kanga",
+      text: 'Professioneller service von Anfang bis zum Ende und hoher Qualität. Dankee nochmals S&P IT-Service',
+      stern: 4
+    },
+    {
+      name: "Robert Kanga",
+      text: 'Professioneller service von Anfang bis zum Ende und hoher Qualität. Dankee nochmals S&P IT-Service',
+      stern: 3
+    },
+    {
+      name: "Robert Kanga",
+      text: 'Professioneller service von Anfang bis zum Ende und hoher Qualität. Dankee nochmals S&P IT-Service',
+      stern: 5
+    },
+    /*{
+      name: "Robert Kanga",
+      text: 'Professioneller service von Anfang bis zum Ende und hoher Qualität. Dankee nochmals S&P IT-Service,' +
+            'Professioneller service von Anfang bis zum Ende und hoher Qualität. Dankee nochmals S&P IT-Service'
+    }*/
+  ];
+
   constructor() {
-    this.profiles = []; 
+    this.profiles = [];
   }
 
   ngOnInit(): void {

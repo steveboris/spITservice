@@ -7,13 +7,14 @@ import {
   FontAwesomeModule,
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faUserCircle, faStar } from '@fortawesome/free-solid-svg-icons';
 import {
   faCheckCircle as farCheckCircle
 } from '@fortawesome/free-regular-svg-icons';
 import {
   faGithub,
-  faLinkedin
+  faLinkedin,
+  faLinkedinIn
 } from '@fortawesome/free-brands-svg-icons';
 import { ComponentsModule } from 'src/app/components/components.module';
 
@@ -37,8 +38,11 @@ export class UserLayoutModule {
     library.addIcons(
       faCheckCircle,
       farCheckCircle,
+      faUserCircle,
+      faStar,
       faGithub,
-      faLinkedin
+      faLinkedin,
+      faLinkedinIn
     );
   }
 }

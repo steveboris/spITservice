@@ -1,0 +1,49 @@
+#footer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7)),
+    url("../../../assets/img/slide1.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom left;
+  color: #fff;
+  transition: all 0.35s ease 0s;
+  -webkit-transition: all 0.35s ease 0s;
+  -moz-transition: all 0.35s ease 0s;
+  overflow: hidden;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-bottom: 1px solid #fff;
+}
+
+h2 {
+  border-bottom: 3px solid #fff;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 0 10px 0;
+}
+
+ul li:hover {
+  cursor: pointer;
+}
+
+.icons {
+  position: absolute;
+  display: flex;
+  bottom: 5px;
+}
+
+.icons .item {
+  margin: 0 8px 0 8px;
+}
+
+@media screen and (max-width: 991px) {
+  .icons {
+    position: relative;
+    margin-top: 20px;
+  }
+}

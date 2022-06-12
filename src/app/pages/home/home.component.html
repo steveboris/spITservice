@@ -166,19 +166,21 @@
     </div>
     <p class="text-center">Was Kunden sagen</p>
     <div class="row mt-4">
-      <div *ngFor="let feedback of feedbacks" class="card col-md-4 mt-2" style="border-radius: 15px 15px 15px 15px;">
-        <div class="pt-3 d-flex">
-          <img class="rounded-circle" width="40px" height="40px" src="../../../assets/img/user.png" alt="img">
-          <div class="ml-4 d-block">
-            <span class="text-black">{{feedback.name}}</span><br>
-            <span class="text-black-50">S&P IT-Service</span>
+      <div *ngFor="let feedback of feedbacks" class="col-md-4 mt-2">
+        <div class="card" style="border-radius: 15px 15px 15px 15px;">
+          <div class="pt-3 d-flex">
+            <img class="rounded-circle" width="40px" height="40px" src="../../../assets/img/user.png" alt="img">
+            <div class="ml-4 d-block">
+              <span class="text-black">{{feedback.name}}</span><br>
+              <span class="text-black-50">S&P IT-Service</span>
+            </div>
           </div>
-        </div>
-        <div class="card-body p-0 pt-3">
-          <p class="xs-font">{{feedback.text}}</p>
-          <div class="d-flex">
-            <div *ngFor="let i of [1,2,3,4,5]">
-              <fa-icon [icon]="['fas', 'star']" class="mr-1 text-warning" *ngIf="i <= feedback.stern"></fa-icon>
+          <div class="card-body p-2 pt-3">
+            <p class="xs-font">{{feedback.text}}</p>
+            <div class="d-flex">
+              <div *ngFor="let i of [1,2,3,4,5]">
+                <fa-icon [icon]="['fas', 'star']" class="mr-1 text-warning" *ngIf="i <= feedback.stern"></fa-icon>
+              </div>
             </div>
           </div>
         </div>

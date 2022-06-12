@@ -16,7 +16,6 @@
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0)),
     url("../../../assets/img/slide1.jpg");
-  background-size: auto;
   background-attachment: fixed;
   background-size: cover;
   height: 70vh;

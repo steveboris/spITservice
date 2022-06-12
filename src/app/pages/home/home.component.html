@@ -1,1 +1,243 @@
-<p>home works!</p>
+<section id="carousel" data-speed="0.8" class="col-md-12 p-0">
+    <header>
+        <div class="container">
+            <div class="row content">
+                <div class="col-xs-12 col-sm-10 col-md-10">
+                    <h1 class="subtitle text-white">WE CREAT DIGITAL PRODUCT</h1>
+                    <h2 class="">FRIENDLY TEMPLATE FOR YOUR APP</h2>
+                    <h3 class="">FOR YOUR SMARTPHONE</h3>
+                    <p class="col-md-10 pl-0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.We ensure sit amet, consectetur
+                        adipiscing elit
+                    </p>
+                    <button class="btn btn-orange btn-radius">GET CONSULTING</button>
+                </div>
+            </div>
+        </div>
+    </header>
+</section>
+
+<section id="about-us" class="bg-about">
+    <div class="container-fluid py-5 mb-5">
+        <div class="container bg-white">
+            <div class="row">
+                <div class="col-lg-5">
+                    <img class="w-100 py-5 h-100" src="../../../assets/img/home.jpg" alt="poster">
+                </div>
+                <div class="col-lg-7 py-5">
+                    <h1 class="subtitle">Über uns</h1>
+                    <h1 class="mb-4 section-title">We Provide The Best Cleaning Services</h1>
+                    <div *ngFor="let user of profiles">
+                        <p>{{user.description}}</p>
+                        <div class="row py-4">
+                            <div class="col-md-6 mb-2">
+                                <div class="row no-gutters">
+                                    <div class="col-auto">
+                                        <img src="{{user.picture}}" class="rounded-circle avatar" alt="avatar" />
+                                    </div>
+                                    <div class="col my-auto">
+                                        <div class="card-block py-auto px-2">
+                                            <h2 class="card-title mb-1 font-weight-900">{{user.name}}</h2>
+                                            <p class="card-text">{{user.job}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 border-left">
+                                <ul class="list-group p-1 border-0">
+                                    <li class="list-group-item p-1 border-0">
+                                        <fa-icon [icon]="['fab', 'github']" class="mr-2"></fa-icon>
+                                        {{user.github}}
+                                    </li>
+                                    <li class="list-group-item p-1 border-0">
+                                        <fa-icon [icon]="['fab', 'linkedin']" class="mr-2"></fa-icon>{{user.linkedIn}}
+                                    </li>
+                                    <li class="list-group-item p-1 border-0">
+                                        <fa-icon [icon]="['fas', 'check-circle']" class="mr-2 text-success"></fa-icon>{{user.portfolio}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="what-we-do" class="bg">
+    <div class="container-fluid py-5 mb-5">
+        <div class="container">
+            <h1 class="subtitle">what we do</h1>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="mb-4 section-title font-weight-800">What Services we Provide for Our Customers Business
+                    </h1>
+                </div>
+                <div class="col-lg-6">
+                    <p class="pt-2">test test tet</p>
+                </div>
+            </div>
+            <div class="row text-left">
+                <div class="col-lg-4 mb-4 we-do" *ngFor="let card of cards">
+                    <a href="{{card.link}}" class="card border-0 text-dark">
+                        <img class="card-img-top" src="{{card.img}}"
+                            alt="website template image">
+                        <span class="card-body">
+                            <h4 class="title mt-4">{{card.title}}</h4>
+                            <p class="xs-font">{{card.text}}</p>
+                        </span>
+                    </a>
+                    <button class="btn btn-sm mt-n3 position-absolute">Read more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="why-us" class="">
+    <div class="container-fluid p-0 mb-5">
+        <div class="container bg-black-50">
+            <div class="row">
+                <div class="col-lg-5">
+                    <img class="w-100 py-5 h-100" src="../../../assets/img/home.jpg" alt="poster">
+                </div>
+                <div class="col-lg-7 py-5">
+                    <h1 class="subtitle">Why Choose Us</h1>
+                    <h1 class="mb-4 section-title">We Provide The Best Cleaning Services</h1>
+                    <p>
+                        Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
+                        ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
+                        dolor
+                    </p>
+                    <div class="row py-4">
+                        <div class="col-md-6 mb-2">
+                            <ul class="list-group p-1">
+                                <li class="list-group-item p-1 border-0" *ngFor="let item of itemlist; let index">
+                                    <fa-icon [icon]="['fas', 'check-circle']" class="mr-2 text-success"></fa-icon>{{index}}
+                                </li>
+                                <li class="list-group-item p-1 border-0">
+                                    <fa-icon [icon]="['fas', 'check-circle']" class="mr-2 text-success"></fa-icon>
+                                    Dapibus ac facilisis in
+                                </li>
+                                <li class="list-group-item p-1 border-0">
+                                    <fa-icon [icon]="['fas', 'check-circle']" class="mr-2 text-success"></fa-icon>Morbi
+                                    leo risus
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group p-1">
+                                <li class="list-group-item p-1 border-0">
+                                    <fa-icon [icon]="['fas', 'check-circle']" class="mr-2 text-success"></fa-icon>Cras
+                                    justo odio
+                                </li>
+                                <li class="list-group-item p-1 border-0">
+                                    <fa-icon [icon]="['fas', 'check-circle']" class="mr-2 text-success"></fa-icon>
+                                    Dapibus ac facilisis in
+                                </li>
+                                <li class="list-group-item p-1 border-0">
+                                    <fa-icon [icon]="['fas', 'check-circle']" class="mr-2 text-success"></fa-icon>Morbi
+                                    leo risus
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row border-top border-right border-bottom contact">
+                        <div class="col-auto ml-0 pl-0">
+                            <video src="../../../assets/video/video.mp4" controls class="col-md-4"></video>
+                        </div>
+                        <div class="col my-auto">
+                            <div class="card-block py-auto px-2">
+                                <h2 class="card-title mb-1 font-weight-900">Title</h2>
+                                <p class="card-text">Description</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container"><span class="angle2"></span> <span class="angle"></span>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 wow bounceIn  headding animated" data-wow-delay=".1s"
+                style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;">
+                <h2>Screen <span>Shots</span></h2>
+                <p>Display your mobile apps awesome features with icon lists and an image carousel of each page. Lorem
+                    ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+                    tation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--
+
+<div class="p-4" style="background-color: #3e3e3e;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <img class="d-block w-100" src="../../../assets/img/home.jpg" alt="poster">
+            </div>
+            <div class="col-md-6">
+                kshdkshk
+                wdjwkdkwj
+                wdjowqudoj
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pt-3 pb-4">
+    <div class="jumbotron jumbotron-fluid pt-5 text-center pl-5 pr-7">
+        <div class="container">
+            <h1 class="display-4">Fluid jumbotron</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top: -5%">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+-->

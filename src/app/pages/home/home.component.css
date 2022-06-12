@@ -1,0 +1,174 @@
+.subtitle {
+  font-size: 16px;
+  position: relative;
+  padding: 0 17px;
+  min-height: 33px;
+  line-height: 32px;
+  display: inline-block;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.btn-orange {
+    background-color: #fa360a;
+    color: #fff;
+}
+
+.btn-radius {
+    border-radius: 10px 10px 10px 10px;
+} 
+
+/* Carousel */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.49)),
+    url("../../../assets/img/home.jpg");
+  background-attachment: scroll;
+  background-size: auto;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 70vh;
+  color: #fff;
+  transition: all 0.35s ease 0s;
+  -webkit-transition: all 0.35s ease 0s;
+  -moz-transition: all 0.35s ease 0s;
+  overflow: hidden;
+}
+
+header .content {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+header .content h2 {
+  font-size: 44px;
+  margin-bottom: 28px;
+  font-family: "Oswald";
+}
+
+header .content h3 {
+  margin-bottom: 28px;
+  color: #ff4c00;
+  font-family: "Oswald";
+}
+
+header .content p {
+  color: #ddd;
+  font-size: 16px;
+  margin-bottom: 28px;
+  font-family: "Oswald";
+}
+
+header .subtitle {
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/*about us*/
+
+.bg-about {
+  background: url("../../../assets/img/shape.png"), no-repeat center center;
+  background-size: auto, auto, auto;
+  background-size: cover;
+}
+
+#about-us .subtitle,
+#what-we-do .subtitle,
+#why-us .subtitle {
+  color: #fa360a;
+  border: 2px solid #fa360a;
+}
+
+#about-us .section-title {
+  font-size: 36px;
+  color: #000;
+  line-height: 44px;
+}
+
+#about-us .avatar {
+  width: 80px;
+}
+
+#about-us .border-left {
+  border-width: 4px !important;
+}
+
+/*WHAT WE DO*/
+#what-we-do {
+  background-color: #f1fafb;
+}
+
+#what-we-do .card {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 20px 20px 20px 20px;
+}
+
+#what-we-do .card-body {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  text-align: left;
+}
+
+#what-we-do .title {
+  font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1300 - 300)));
+}
+
+#what-we-do a {
+  text-decoration: none;
+}
+
+.card-img-top {
+  border-radius: 10px 10px 10px 10px;
+  padding: 10px;
+}
+
+.we-do button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background-color: #fa360a;
+  border-radius: 10px 10px 10px 10px;
+}
+
+/*why-us*/
+#why-us .contact {
+    background-color: #fa360a;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px 30px 30px 30px;
+}
+
+#why-us .contact img  {
+    border-radius: 30px 0 0 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  #about-us .border-left {
+    border-width: 0 !important;
+  }
+}

@@ -132,3 +132,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   color: #000000;
 }
 
+footer .icons {
+  position: absolute;
+  display: flex;
+  bottom: -2px;
+}
+
+footer .icons .item {
+  margin: 0 8px 0 8px;
+}
+
+footer .icons .item:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+  footer .icons {
+    position: relative;
+    margin-top: 20px;
+  }
+}
+
+

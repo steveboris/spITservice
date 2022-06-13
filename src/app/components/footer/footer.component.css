@@ -30,20 +30,3 @@ ul li {
 ul li:hover {
   cursor: pointer;
 }
-
-.icons {
-  position: absolute;
-  display: flex;
-  bottom: 5px;
-}
-
-.icons .item {
-  margin: 0 8px 0 8px;
-}
-
-@media screen and (max-width: 991px) {
-  .icons {
-    position: relative;
-    margin-top: 20px;
-  }
-}

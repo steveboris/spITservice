@@ -7,7 +7,7 @@ import {
   FontAwesomeModule,
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
-import { faCheckCircle, faUserCircle, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faUserCircle, faStar, faPlay, faP } from '@fortawesome/free-solid-svg-icons';
 import {
   faCheckCircle as farCheckCircle
 } from '@fortawesome/free-regular-svg-icons';
@@ -20,9 +20,10 @@ import { ComponentsModule } from 'src/app/components/components.module';
 
 import { UserLayoutRoutes } from './user-layout.routing';
 import { HomeComponent } from 'src/app/pages/home/home.component';
+import { ServicesComponent } from 'src/app/pages/services/services.component';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, ServicesComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -42,7 +43,8 @@ export class UserLayoutModule {
       faStar,
       faGithub,
       faLinkedin,
-      faLinkedinIn
+      faLinkedinIn,
+      faPlay
     );
   }
 }

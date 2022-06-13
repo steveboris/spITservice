@@ -16,12 +16,14 @@ import {
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { Footer2Component } from './footer2/footer2.component';
+import { BreadcumbComponent } from './breadcumb/breadcumb.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
     HeaderComponent,
-    Footer2Component
+    Footer2Component,
+    BreadcumbComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +31,7 @@ import { Footer2Component } from './footer2/footer2.component';
     FontAwesomeModule
   ],
   exports: [
+    BreadcumbComponent,
     FooterComponent,
     Footer2Component,
     HeaderComponent,

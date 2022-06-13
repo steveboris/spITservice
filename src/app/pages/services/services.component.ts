@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css']
 })
-export class ServicesComponent implements OnInit, AfterViewInit {
+export class ServicesComponent implements OnInit {
 
   serviceName: string | null = null;
   isSoftware: boolean = false;
@@ -17,15 +17,14 @@ export class ServicesComponent implements OnInit, AfterViewInit {
     private activatedroute: ActivatedRoute,
     private router: Router
   ) {
-    this.activatedroute.paramMap.subscribe(params => this.serviceName = params.get('name'));
+    this.activatedroute.paramMap.subscribe(params => {
+      this.serviceName = params.get('name');
+      this.checkServiceName();
+  });
   }
 
   ngOnInit(): void {
 
-  }
-
-  ngAfterViewInit(): void {
-    this.checkServiceName();
   }
 
   checkServiceName() {

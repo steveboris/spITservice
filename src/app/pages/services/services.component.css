@@ -1,0 +1,16 @@
+ul li {
+  list-style: none;
+  margin: 10px 0 20px 0;
+}
+
+button {
+  background-color: rgba(0, 0, 0, .5);
+  padding: 8px 30px 8px 30px !important;
+  border-radius: 20px 20px 20px 20px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+h2 {
+  border-bottom: 2px solid rgba(0, 0, 0, .5);
+}

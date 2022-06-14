@@ -1,8 +1,121 @@
 nav {
-    padding-left: 50px;
-    padding-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.mmr-8 {
-    margin-right: 80px;
+.dropdown-menu {
+  border-radius: 20px;
+}
+
+.dropdown-menu a {
+  padding: 8px 15px 8px 15px;
+  font-weight: 400;
+}
+
+.dropdown-menu a:hover:first-child {
+  border-radius: 20px 20px 0 0;
+}
+
+.dropdown-menu a:hover:last-child {
+  border-radius: 0 0 20px 20px;
+}
+
+ul li {
+  background-color: #fff;
+  margin-right: 20px;
+  padding: 0 15px 0 15px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+ul li.active {
+  background: #c01ff3 !important;
+  color: #fff !important;
+}
+
+ul li.active .dropdown-menu a {
+  color: rgba(0, 0, 0, 0.5) !important;
+  font-weight: 400;
+}
+
+ul li.active a {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+form button {
+  padding: 7px 15px 7px 15px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  text-transform: uppercase;
+}
+
+.size-991 li {
+  margin: 0 0 10px 0;
+  padding-left: 20px !important;
+}
+
+.size-991 li:first-child {
+  margin: 10px 0 10px 0;
+}
+
+.size-991 .dropdown-menu {
+  margin-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .consulting {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1018px) {
+  ul li {
+    padding: 0 10px 0 10px !important;
+  }
+
+  button {
+    margin-left: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  form button {
+    display: none !important;
+  }
+
+  button {
+    margin-left: auto !important;
+  }
+
+  ul li {
+    margin: 0 0 10px 0;
+    padding-left: 20px !important;
+  }
+
+  ul li:first-child {
+    margin: 10px 0 10px 0;
+  }
+
+  .dropdown-menu {
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 306px) {
+  form {
+    display: none;
+  }
 }

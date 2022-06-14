@@ -187,9 +187,25 @@ header .subtitle {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1500px) {
+  header {
+    height: 50vh;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 993px) {
+  header {
+    height: 40vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   #about-us .border-left {
     border-width: 0 !important;
+  }
+
+  header {
+    height: 35vh;
   }
 }
 

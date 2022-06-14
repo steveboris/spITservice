@@ -65,7 +65,7 @@ header .subtitle {
 
 /*about us*/
 .bg-about {
-  background: url("../../../assets/img/shape.png"), no-repeat center center;
+  background: #fff;
   background-size: auto, auto, auto;
   background-size: cover;
 }
@@ -195,7 +195,7 @@ header .subtitle {
 
 @media only screen and (min-width: 768px) and (max-width: 993px) {
   header {
-    height: 40vh;
+    height: 55vh;
   }
 }
 
@@ -205,7 +205,17 @@ header .subtitle {
   }
 
   header {
-    height: 35vh;
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  header {
+    height: 55vh;
+  }
+
+  #carousel button {
+    font-size: 12px;
   }
 }
 

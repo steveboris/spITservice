@@ -20,7 +20,7 @@ export class ServicesComponent implements OnInit {
     this.activatedroute.paramMap.subscribe(params => {
       this.serviceName = params.get('name');
       this.checkServiceName();
-  });
+    });
   }
 
   ngOnInit(): void {

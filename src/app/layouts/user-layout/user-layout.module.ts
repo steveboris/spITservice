@@ -7,23 +7,27 @@ import {
   FontAwesomeModule,
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
-import { faCheckCircle, faUserCircle, faStar, faPlay, faP } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faUserCircle, faStar, faPlay, faMessage } from '@fortawesome/free-solid-svg-icons';
 import {
   faCheckCircle as farCheckCircle
 } from '@fortawesome/free-regular-svg-icons';
 import {
   faGithub,
   faLinkedin,
-  faLinkedinIn
+  faLinkedinIn,
+  faFacebook,
+  faFacebookMessenger,
+  faTwitter
 } from '@fortawesome/free-brands-svg-icons';
 import { ComponentsModule } from 'src/app/components/components.module';
 
 import { UserLayoutRoutes } from './user-layout.routing';
 import { HomeComponent } from 'src/app/pages/home/home.component';
 import { ServicesComponent } from 'src/app/pages/services/services.component';
+import { PortfolioComponent } from 'src/app/pages/portfolio/portfolio.component';
 
 @NgModule({
-  declarations: [HomeComponent, ServicesComponent],
+  declarations: [HomeComponent, ServicesComponent, PortfolioComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -44,7 +48,11 @@ export class UserLayoutModule {
       faGithub,
       faLinkedin,
       faLinkedinIn,
-      faPlay
+      faPlay,
+      faMessage,
+      faFacebook,
+      faFacebookMessenger,
+      faTwitter
     );
   }
 }

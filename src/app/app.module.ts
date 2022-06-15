@@ -13,7 +13,6 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { UserLayoutComponent } from './layouts/user-layout/user-layout.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

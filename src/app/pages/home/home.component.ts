@@ -34,15 +34,15 @@ export class HomeComponent implements OnInit {
       'ihnen auch bei der Digitalisierung und Automatisierung von Geschäftsprozessen.',
     github: {
       text: 'Github',
-      link: 'https://github.com'
+      link: 'https://github.com/pascalnansse'
     },
     linkedIn: {
       text: 'LinkedIn',
       link: 'https://linkedin.com'
     },
     portfolio:{
-      text: 'Profile',
-      link: '#'
+      text: 'Über mich',
+      link: '/profile/pascal-nansse'
     }
   };
 
@@ -63,8 +63,8 @@ export class HomeComponent implements OnInit {
         link: 'https://linkedin.com'
       },
       portfolio:{
-        text: 'Profile',
-        link: '#'
+        text: 'Über mich',
+        link: '/profile/steve-boris'
       }
   };
 

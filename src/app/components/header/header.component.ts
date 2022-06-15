@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
   hide: boolean = false;
   screenSize: number = 0;
   // each position correspond to each link. Help to know when to add the class "active"
-  links = [true, false, false, false];
+  links = [false, false, false, false];
 
   constructor() {
     this.screenSize = window.innerWidth;

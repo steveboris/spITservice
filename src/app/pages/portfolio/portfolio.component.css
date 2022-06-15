@@ -1,0 +1,51 @@
+img {
+  width: 90px;
+  height: 90px !important;
+}
+
+.card {
+  border-top: 4px solid turquoise !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.left .card-body {
+  padding-bottom: 8px;
+}
+
+.btn-follow {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-follow button {
+  border-radius: 20px;
+  padding: 1px 20px 1px 20px;
+}
+
+.dropdown-divider {
+  border-width: 2px;
+}
+
+.progress {
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul li {
+  list-style: none;
+  background-color: #fff;
+  margin-bottom: .6em;
+  font-weight: 500;
+}
+
+.bg-principal {
+  background: #c01ff3 !important;
+}
+
+

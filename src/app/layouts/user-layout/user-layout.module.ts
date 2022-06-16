@@ -26,13 +26,15 @@ import { HomeComponent } from 'src/app/pages/home/home.component';
 import { ServicesComponent } from 'src/app/pages/services/services.component';
 import { PortfolioComponent } from 'src/app/pages/portfolio/portfolio.component';
 import { ProjectsComponent } from 'src/app/pages/projects/projects.component';
+import { ContactComponent } from 'src/app/pages/contact/contact.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ServicesComponent,
     PortfolioComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,41 @@
+#contact {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../assets/img/home.jpg");
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: left center;
+  transition: all 0.35s ease 0s;
+  -webkit-transition: all 0.35s ease 0s;
+  -moz-transition: all 0.35s ease 0s;
+  overflow: hidden;
+}
+
+.contact .card {
+  background-color: rgba(255, 255, 255, 255);
+  border-left: 4px solid var(--color-purple);
+}
+
+.form input, select, textarea {
+  margin: 255 0 0 0;
+  border-radius: 8px;
+  padding: 4px 0 4px 5px;
+  background-color: #fff;
+  box-shadow: var(--card-box-shadow);
+  border: 2px solid #fff;
+}
+
+button {
+  background-color: var(--bg-purple);
+  color: #fff;
+  float: right;
+  border-radius: 50px;
+  margin-bottom: 0;
+}
+
+textarea {
+  min-height: 100px;
+  max-height: 100px;
+}

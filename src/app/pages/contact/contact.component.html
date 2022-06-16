@@ -1,0 +1,65 @@
+<app-breadcumb></app-breadcumb>
+<!--content-->
+<section id="contact" class="mt-4">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4 d-flex pb-0 mb-0">
+        <div class="d-block">
+          <h1 class="text-black bg-white title-purple">Kontakt aufnehmen</h1>
+          <h3 class="text-white">
+            At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </h3>
+
+          <div class="row mb-0 ml-0 pl-0 mb-0 pb-0 contact">
+            <div class="card px-2 mt-2 mb-0 col-md-10" *ngFor="let contact of contatcs">
+              <div class="pt-2 d-flex">
+                <img class="rounded-circle" width="35px" height="35px" class="my-auto" src="{{contact.icon}}" alt="img">
+                <div class="ml-5 d-block my-auto">
+                  <span class="text-black font-weight-600">{{contact.title}}</span><br>
+                  <span class="text-black-50">{{contact.subtitle}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 d-flex">
+        <div class="card px-2 col-sm-12 col-md-12 border border-white">
+          <div class="card-body pt-3 pb-1">
+            <div class="form">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <input type="text" name="lb2-name" id="name" placeholder="Name*" class="col-md-12">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" name="lbl-tel" id="tel" placeholder="Handy" class="col-md-12">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="email" name="lbl-email" id="email" placeholder="Email*" class="col-md-12">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <select name="object" id="subjet" placeholder="auswählen" class="col-md-12">
+                    <option value="" disabled selected class="text-black-50">Thema auswählen</option>
+                    <option value="{{topics[i]}}" *ngFor="let t of topics; let i = index">{{t}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <textarea name="content" id="" cols="30" rows="10" class="col-md-12"></textarea>
+                </div>
+              </div>
+              <button class="btn btn-small">Senden</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

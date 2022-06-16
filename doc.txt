@@ -25,3 +25,8 @@ Project:
 https://www.flaticon.com/premium-icon/sport-car_3085330?term=car&page=1&position=8&page=1&position=8&related_id=3085330&origin=search
 https://www.flaticon.com/free-icon/ux_1055666?term=apps&page=1&position=46&page=1&position=46&related_id=1055666&origin=search
 https://www.flaticon.com/premium-icon/web-link_3308395?term=website&page=1&position=10&page=1&position=10&related_id=3308395&origin=search
+
+contact:
+
+https://www.flaticon.com/premium-icon/location_3038019?term=location%20pin&page=1&position=57&page=1&position=57&related_id=3038019&origin=search
+https://www.flaticon.com/premium-icon/call_6066492?term=contact&page=1&position=71&page=1&position=71&related_id=6066492&origin=search#

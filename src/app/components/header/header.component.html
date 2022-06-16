@@ -13,7 +13,7 @@
   <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
     <ul class="navbar-nav {{hide ? 'size-991' : ''}}">
       <li class="nav-item {{links[0] ? 'active' : ''}}">
-        <a class="nav-link" [routerLink]="['/home']" (click)="setActiveClass(0)">Home</a>
+        <a class="nav-link" href="/home" (click)="setActiveClass(0)">Home</a>
       </li>
       <li class="nav-item dropdown text-black-50 {{links[1]  ? 'active' : ''}}">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -21,18 +21,21 @@
           Dienstleitungen
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-black-50" [routerLink]="['/services/software']" (click)="setActiveClass(1)">Softwareentwicklung</a>
+          <a class="dropdown-item text-black-50" href="/services/software"
+            (click)="setActiveClass(1)">Softwareentwicklung</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item text-black-50" [routerLink]="['/services/website']" (click)="setActiveClass(1)">Webseiteentwicklung</a>
+          <a class="dropdown-item text-black-50" href="/services/website"
+            (click)="setActiveClass(1)">Webseiteentwicklung</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item text-black-50" [routerLink]="['/services/consulting']" (click)="setActiveClass(1)">IT consulting</a>
+          <a class="dropdown-item text-black-50" href="/services/consulting" (click)="setActiveClass(1)">IT
+            consulting</a>
         </div>
       </li>
       <li class="nav-item {{links[2] ? 'active' : ''}}">
-        <a class="nav-link" [routerLink]="['/projects']" (click)="setActiveClass(2)">Projekte</a>
+        <a class="nav-link" href="/projects" (click)="setActiveClass(2)">Projekte</a>
       </li>
       <li class="nav-item {{links[3] ? 'active' : ''}}">
-        <a class="nav-link" [routerLink]="['/contacts']" (click)="setActiveClass(3)">Kontakte</a>
+        <a class="nav-link" href="/contacts" (click)="setActiveClass(3)">Kontakte</a>
       </li>
       <li class="nav-item consulting bg-primary">
         <a class="nav-link text-white font-weight-800">GET CONSULTING</a>
@@ -40,6 +43,7 @@
     </ul>
   </div>
   <form class="form-inline my-2 my-lg-0" *ngIf="!hide">
-    <button class="btn btn-sm btn-primary btn-animate my-2 my-sm-0 font-weight-800" type="submit">Get consulting</button>
+    <button class="btn btn-sm btn-primary btn-animate my-2 my-sm-0 font-weight-800" type="submit">Get
+      consulting</button>
   </form>
 </nav>

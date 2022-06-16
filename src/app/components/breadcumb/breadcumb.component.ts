@@ -26,11 +26,14 @@ export class BreadcumbComponent implements OnInit {
       } else {
         this.currentUrl = `${paths[0].path}`;
       }
+
+      // change parent url name
+      if (this.parentUrl === 'services') this.parentUrl = 'Dienstleitungen';
+      if (this.currentUrl === 'software') this.currentUrl = 'Softwareentwicklung';
+      if (this.currentUrl === 'website') this.currentUrl = 'Webseiteentwicklung';
+      if (this.currentUrl === 'projects') this.currentUrl = 'Projekte';
+      if (this.currentUrl === 'contacts') this.currentUrl = 'Kontakt';
     });
-    // change parent url name
-    if (this.parentUrl === 'services') {
-      this.parentUrl = 'Dienstleitungen';
-    }
   }
 
   transformUrl(value: string | null): string {

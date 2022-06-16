@@ -19,6 +19,12 @@ export class HeaderComponent implements OnInit {
     this.hide = this.screenSize === 991;
     if(location.href.split('/').includes('services')) {
       this.setActiveClass(1);
+    } else if(location.href.split('/').includes('projects')) {
+      this.setActiveClass(2);
+    } else if(location.href.split('/').includes('contacts')) {
+      this.setActiveClass(3);
+    } else {
+      this.setActiveClass(0);
     }
   }
 

@@ -21,11 +21,11 @@
           Dienstleitungen
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-black-50" href="/services/software" (click)="setActiveClass(1)">Softwareentwicklung</a>
+          <a class="dropdown-item text-black-50" [routerLink]="['/services/software']" (click)="setActiveClass(1)">Softwareentwicklung</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item text-black-50" href="/services/website" (click)="setActiveClass(1)">Webseiteentwicklung</a>
+          <a class="dropdown-item text-black-50" [routerLink]="['/services/website']" (click)="setActiveClass(1)">Webseiteentwicklung</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item text-black-50" href="/services/consulting" (click)="setActiveClass(1)">IT consulting</a>
+          <a class="dropdown-item text-black-50" [routerLink]="['/services/consulting']" (click)="setActiveClass(1)">IT consulting</a>
         </div>
       </li>
       <li class="nav-item {{links[2] ? 'active' : ''}}">
@@ -40,6 +40,6 @@
     </ul>
   </div>
   <form class="form-inline my-2 my-lg-0" *ngIf="!hide">
-    <button class="btn btn-sm btn-primary my-2 my-sm-0 font-weight-800" type="submit">Get consulting</button>
+    <button class="btn btn-sm btn-primary btn-animate my-2 my-sm-0 font-weight-800" type="submit">Get consulting</button>
   </form>
 </nav>

@@ -1,0 +1,32 @@
+<app-breadcumb></app-breadcumb>
+<!--content-->
+<div class="container pt-5 pb-0">
+  <div class="row">
+    <p class="px-4">
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+      At vero eos et accusam et justo duo dolores et ea rebum.
+      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+      At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+  </div>
+  <div class="row mt-2">
+    <div *ngFor="let project of projects" class="col-md-4 mb-4 d-flex">
+      <div class="card px-2">
+        <div class="pt-2 d-flex">
+          <img class="rounded-circle" width="80px" height="80px" src="{{project.img}}" alt="img">
+          <div class="ml-5 d-block my-auto">
+            <span class="text-black font-weight-600">{{project.title}}</span><br>
+            <span class="text-black-50">{{project.tech}}</span>
+          </div>
+        </div>
+        <div class="card-body p-2 pt-3">
+          <p class="xs-font">{{project.text}}</p>
+          <a href="{{project.link}}" target="_blank">
+            <button class="btn float-right mt-2">Mehr</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

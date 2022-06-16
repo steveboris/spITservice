@@ -155,8 +155,8 @@ header .subtitle {
 /*why-us*/
 #why-us {
   background-image: linear-gradient(
-      rgba(0, 0, 0, 0.67),
-      rgba(168, 19, 148, 0.445)
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
     ),
     url("../../../assets/img/home.jpg");
   background-attachment: scroll;

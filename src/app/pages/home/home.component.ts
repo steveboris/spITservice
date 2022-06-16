@@ -25,28 +25,8 @@ interface User {
 })
 export class HomeComponent implements OnInit {
   public profiles:User[];
-  public user1: User = {
-    picture: '../../../assets/img/user.png',
-    name: 'PASCAL NANSSE',
-    job: 'CEO & FOUNDER',
-    description:
-      'Ich bin IT Berater (Hardware, Software) und helfen' +
-      'ihnen auch bei der Digitalisierung und Automatisierung von Geschäftsprozessen.',
-    github: {
-      text: 'Github',
-      link: 'https://github.com/pascalnansse'
-    },
-    linkedIn: {
-      text: 'LinkedIn',
-      link: 'https://linkedin.com'
-    },
-    portfolio:{
-      text: 'Über mich',
-      link: '/profile/pascal-nansse'
-    }
-  };
 
-  public user2: User = {
+  public user1: User = {
     picture: '../../../assets/img/user.png',
     name: 'STEVE TITINANG',
     job: 'CEO & FOUNDER',
@@ -68,19 +48,40 @@ export class HomeComponent implements OnInit {
       }
   };
 
+  public user2: User = {
+    picture: '../../../assets/img/user.png',
+    name: 'PASCAL NANSSE',
+    job: 'CEO & FOUNDER',
+    description:
+      'Ich bin IT Berater (Hardware, Software) und helfen' +
+      'ihnen auch bei der Digitalisierung und Automatisierung von Geschäftsprozessen.',
+    github: {
+      text: 'Github',
+      link: 'https://github.com/pascalnansse'
+    },
+    linkedIn: {
+      text: 'LinkedIn',
+      link: 'https://linkedin.com'
+    },
+    portfolio:{
+      text: 'Über mich',
+      link: '/profile/pascal-nansse'
+    }
+  };
+
   /**What we do */
   public cards = [
     {
       img: '../../../assets/img/development.png',
       title: 'Apps & Software Entwicklung',
       text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      link: '#'
+      link: 'services/software'
     },
     {
       img: '../../../assets/img/web-design.png',
       title: 'Webentwicklung',
       text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      link: '#'
+      link: 'services/website'
     },
     {
       img: '../../../assets/img/computer.png',
@@ -92,7 +93,7 @@ export class HomeComponent implements OnInit {
       img: '../../../assets/img/video-call.png',
       title: 'Consulting',
       text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      link: '#'
+      link: 'services/consulting'
     }
   ]
 
@@ -127,5 +128,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.profiles.push(this.user1);
     this.profiles.push(this.user2);
+  }
+
+  navigateToService(url: string) {
+    location.href = url;
   }
 }

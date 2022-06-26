@@ -64,6 +64,11 @@ header .subtitle {
 }
 
 /*about us*/
+#about-us {
+  border-left: 3px solid var(--color-purple);
+  border-right: 3px solid var(--color-purple);
+}
+
 .bg-about {
   background: #fff;
   background-size: auto, auto, auto;
@@ -78,6 +83,7 @@ header .subtitle {
 
 #about-us .avatar {
   width: 65px;
+  height: 78px;
 }
 
 #about-us .border-left {
@@ -216,6 +222,30 @@ header .subtitle {
 
   #carousel button {
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 270px) {
+  #carousel h2 {
+
+  }
+
+  #carousel .btn {
+    font-size: .6rem !important;
+  }
+}
+
+@media only screen and (max-width: 230px) {
+  #carousel h2 {
+    font-size: 14px;
+  }
+
+  #carousel h3 {
+    font-size: 12px !important;
+  }
+
+  #carousel .btn {
+    font-size: .4rem !important;
   }
 }
 

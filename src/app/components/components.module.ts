@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
+
+import { MatDividerModule } from '@angular/material/divider';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+
 import {
   FontAwesomeModule,
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faVideoCamera, faVideo } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
   faLinkedin,
@@ -28,7 +33,10 @@ import { BreadcumbComponent } from './breadcumb/breadcumb.component';
   imports: [
     CommonModule,
     RouterModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatDividerModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   exports: [
     BreadcumbComponent,
@@ -41,6 +49,8 @@ export class ComponentsModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(
       faStar,
+      faVideo,
+      faVideoCamera,
       faFacebook,
       faLinkedin,
       faLinkedinIn,

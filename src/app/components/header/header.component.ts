@@ -1,5 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+
+import { MatDialog } from "@angular/material/dialog";
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,28 +14,23 @@ export class HeaderComponent implements OnInit {
   // each position correspond to each link. Help to know when to add the class "active"
   links = [false, false, false, false];
 
-  constructor(private route: Router) {
+  constructor(private modalDialog: MatDialog) {
     this.screenSize = window.innerWidth;
   }
 
   ngOnInit(): void {
     this.hide = this.screenSize === 991;
-    if(location.href.split('/').includes('services')) {
+    if (location.href.split('/').includes('services')) {
       this.setActiveClass(1);
-    } else if(location.href.split('/').includes('projects')) {
+    } else if (location.href.split('/').includes('projects')) {
       this.setActiveClass(2);
-    } else if(location.href.split('/').includes('contacts')) {
+    } else if (location.href.split('/').includes('contacts')) {
       this.setActiveClass(3);
     } else if (location.href.split('/').includes('profile')) {
       this.links.filter(x => x).forEach((v, i) => this.links[i] = !v);
     } else {
       this.setActiveClass(0);
     }
-  }
-
-  @HostListener('window:')
-  onUrlChanged() {
-
   }
 
   @HostListener('window:resize', ['$event'])
@@ -43,5 +40,14 @@ export class HeaderComponent implements OnInit {
 
   setActiveClass(position: number) {
     this.links.forEach((val, i) => this.links[i] = i === position);
+  }
+
+  startVideoCall(form: any) {
+    this.modalDialog.open(form, { disableClose: true, autoFocus: true, panelClass: ['col-sm-12', 'col-md-4'] });
+  }
+
+  openJitsi() {
+    const url = 'https://meet.jit.si/spITservice';
+    window.open(url, '_blank');
   }
 }

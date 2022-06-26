@@ -1,13 +1,5 @@
-.btn-animate {
-  padding: 1cm;
-  animation: blink 5s infinite;
-}
-
-@keyframes blink {
-  50% {
-    background: #FFF;
-    color: #0080FF
-  }
+.brandname {
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 
 nav {
@@ -25,11 +17,11 @@ nav {
 }
 
 .dropdown-menu a:hover:first-child {
-  border-radius: 20px 20px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 .dropdown-menu a:hover:last-child {
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 5px 5px;
 }
 
 ul li {
@@ -38,6 +30,18 @@ ul li {
   padding: 0 15px 0 15px;
   border-radius: 20px;
   box-shadow: var(--btn-box-shadow);
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.nav-item:hover,
+.dropdown-item:hover {
+  background-color: var(--color-purple) !important;
+  color: #ffffff !important;
+}
+
+.nav-item:hover .nav-link {
+  color: #ffffff !important;
 }
 
 ul li.active {
@@ -55,7 +59,19 @@ ul li.active a {
   font-weight: 600;
 }
 
-form button {
+.btn-animate {
+  padding: 1cm;
+  animation: blink 5s infinite;
+}
+
+@keyframes blink {
+  50% {
+    background: #fff;
+    color: #0080ff;
+  }
+}
+
+.call button {
   padding: 7px 15px 7px 15px;
   border-radius: 20px;
   box-shadow: var(--btn-box-shadow);
@@ -97,7 +113,7 @@ form button {
 }
 
 @media only screen and (max-width: 991px) {
-  form button {
+  .call button {
     display: none !important;
   }
 
@@ -125,13 +141,19 @@ form button {
 }
 
 @media only screen and (max-width: 360px) {
-  .navbar-brand {
+  .brandname {
     display: none;
   }
 }
 
 @media only screen and (max-width: 306px) {
-  form {
+  .call {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 223px) {
+  .navbar-brand {
     display: none;
   }
 }

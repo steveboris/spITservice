@@ -30,3 +30,12 @@ ul li {
 ul li:hover {
   cursor: pointer;
 }
+
+.links a {
+  color: #fff !important;
+}
+
+.links a:hover {
+  text-decoration: none;
+}
+

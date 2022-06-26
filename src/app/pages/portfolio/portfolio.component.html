@@ -3,10 +3,12 @@
   <div class="row">
     <div class="col-md-4 left pr-0">
       <div class="card pt-4">
-        <img class="rounded-circle d-flex mr-auto ml-auto my-auto border" src="../../../assets/img/user.png"
-          alt="avatar">
+        <img class="rounded-circle d-flex mr-auto ml-auto my-auto border" src="../../../assets/avatar/steve.png"
+          alt="avatar" *ngIf="isSteve">
+        <img class="rounded-circle d-flex mr-auto ml-auto my-auto border" src="../../../assets/avatar/pascal.png"
+        alt="avatar" *ngIf="!isSteve">
         <div class="card-body pt-2">
-          <h2 class="mt-0 mb-0 text-center font-weight-900">Steve Boris</h2>
+          <h2 class="mt-0 mb-0 text-center font-weight-900">{{username}}</h2>
           <p class="text-center text-black-50 mb-4">Student - TH Brandenburg</p>
           <div class="d-flex mb-0">
             <fa-icon [icon]="['fab', 'github']" class="mr-2 mb-0 pb-0"></fa-icon>
@@ -18,12 +20,14 @@
           <div class="dropdown-divider"></div>
           <div class="d-flex">
             <p class="mb-2 mr-auto">Friends</p>
-            <p class="mb-2">11121</p>
+            <p class="mb-2" *ngIf="isSteve">100</p>
+            <p class="mb-2" *ngIf="!isSteve">150</p>
           </div>
           <div class="dropdown-divider mt-0"></div>
           <div class="d-flex">
             <p class="mb-2 mr-auto">Followers</p>
-            <p class="mb-2">11121</p>
+            <p class="mb-2" *ngIf="isSteve">50</p>
+            <p class="mb-2" *ngIf="!isSteve">120</p>
           </div>
           <div class="dropdown-divider mt-0"></div>
           <div class="d-flex btn-follow mr-0 ml-0 pt-1">
@@ -43,10 +47,18 @@
         <h2 class="font-weight-900 mb-0 pl-3">Über mich</h2>
         <div class="dropdown-divider mt-0"></div>
         <div class="card-body pt-1">
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+          <p *ngIf="isSteve">
+            Entwickler mit Kenntnissen in Webanwendungen, Anwendungsentwicklung und Systemverwaltung.
+            Erfahrung mit allen Phasen des Entwicklungszyklus für dynamische Webprojekte.
+            Bewandert in zahlreichen Programmiersprachen wie PHP, JavaScript, HTML, CSS, MySQL.
+            Programmiert gerne und lernt gerne andere Programmiersprachen.
+          </p>
+          <p *ngIf="!isSteve">
+            Ich bin Softwareentwickler mit mehr als 4 Jahren Erfahrung. Als leidenschaftlicher Informatiker
+            habe ich gelernt, in verschiedenen Programmiersprachen zu kodieren (Java, Javascript, PHP,
+            AngularJS...) und habe persönliche Projekte erstellt, darunter mehrere Websites und 
+            Geschäftsseiten. Ich bin vielseitig und möchte meine Fähigkeiten und Erfahrungen nun in den 
+            Dienst Ihrer Bedürfnisse stellen. 
           </p>
           <div class="dropdown-divider"></div>
           <div class="d-flex">
@@ -61,15 +73,18 @@
           <div class="dropdown-divider mt-0"></div>
           <div class="d-flex btn-follow mx-auto my-auto pt-1">
             <div class="d-block mr-auto">
-              <p class="m-0 text-center text-primary font-weight-600">44</p>
+              <p class="m-0 text-center text-primary font-weight-600" *ngIf="isSteve">44</p>
+              <p class="m-0 text-center text-primary font-weight-600" *ngIf="!isSteve">10</p>
               <p class="m-0 text-center text-primary font-weight-600">Projects</p>
             </div>
             <div class="d-block mr-auto">
-              <p class="m-0 text-center text-primary font-weight-600">60</p>
+              <p class="m-0 text-center text-primary font-weight-600" *ngIf="isSteve">60</p>
+              <p class="m-0 text-center text-primary font-weight-600" *ngIf="!isSteve">42</p>
               <p class="m-0 text-center text-primary font-weight-600">Tasks</p>
             </div>
             <div class="d-block">
-              <p class="m-0 text-center text-primary font-weight-600">78</p>
+              <p class="m-0 text-center text-primary font-weight-600" *ngIf="isSteve">10</p>
+              <p class="m-0 text-center text-primary font-weight-600" *ngIf="!isSteve">44</p>
               <p class="m-0 text-center text-primary font-weight-600">Uploads</p>
             </div>
           </div>
@@ -80,7 +95,7 @@
         <h2 class="font-weight-900 mb-0 pl-3">Adresse</h2>
         <div class="dropdown-divider mt-0"></div>
         <div class="card-body pt-1">
-          <p>Straße 2, 123222 Berlin</p>
+          <p>Straße 2, 14770 Brandenburg</p>
         </div>
       </div>
     </div>
@@ -89,70 +104,125 @@
         <div class="row">
           <div class="col text-left mb-3">
             <p class="m-0 font-weight-600">Name</p>
-            <span>Steve Boris</span>
+            <span>{{username}}</span>
           </div>
           <div class="col text-left mb-3">
             <p class="m-0 font-weight-600">Handy</p>
-            <span>+49 xxxx xxxxxxx</span>
+            <span>+49 152 0xxx xxxx</span>
           </div>
           <div class="col text-left mb-3">
             <p class="m-0 font-weight-600">E-Mail</p>
-            <span>info@sp-itservice.de</span>
+            <span *ngIf="isSteve">titinang@th-brandenburg.de</span>
+            <span *ngIf="!isSteve">pascalnansse@th-brandenburg.de</span>
           </div>
         </div>
         <div class="dropdown-divider mt-0 mb-3"></div>
         <div class="px-1 mb-2">
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua.
+          <p *ngIf="isSteve">
+            Entwickler mit Kenntnissen in Webanwendungen, Anwendungsentwicklung und Systemverwaltung. Ich lerne gerne
+            neue Programmierprache.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua.
+          <p *ngIf="!isSteve">
+            Ich bin Softwareentwickler mit mehr als 4 Jahren Erfahrung. Als leidenschaftlicher Informatiker
+            habe ich gelernt, in verschiedenen Programmiersprachen zu kodieren (Java, Javascript, PHP, AngularJS...).
           </p>
         </div>
         <div class="px-1 mb-4">
           <h2 class="mb-0">Ausbildung</h2>
           <div class="dropdown-divider pt-0"></div>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua.
-          </p>
+          <div *ngIf="isSteve">
+            <div *ngFor="let val of steve" class="mb-2">
+              <h3 class="text-primary mb-2">
+                <fa-icon [icon]="['fas', 'graduation-cap']" class="mr-1"></fa-icon> {{val.degree}}
+              </h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="mb-0">
+                    <small><fa-icon [icon]="['fas', 'university']" class="mr-1"></fa-icon></small>
+                    <small>{{val.university}}</small>
+                  </p>
+                  <p>
+                    <small><fa-icon [icon]="['fas', 'calendar']" class="mr-1"></fa-icon></small>
+                    <small>{{val.date}}</small>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p>
+                    <small><fa-icon [icon]="['fas', 'map-marker']" class="mr-1"></fa-icon></small>
+                    <small>{{val.location}}</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="!isSteve">
+            <div *ngFor="let val of pascal" class="mb-2">
+              <h3 class="text-primary mb-2">
+                <fa-icon [icon]="['fas', 'graduation-cap']" class="mr-1"></fa-icon> {{val.degree}}
+              </h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="mb-0">
+                    <small><fa-icon [icon]="['fas', 'university']" class="mr-1"></fa-icon></small>
+                    <small>{{val.university}}</small>
+                  </p>
+                  <p>
+                    <small><fa-icon [icon]="['fas', 'calendar']" class="mr-1"></fa-icon></small>
+                    <small>{{val.date}}</small>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p>
+                    <small><fa-icon [icon]="['fas', 'map-marker']" class="mr-1"></fa-icon></small>
+                    <small>{{val.location}}</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="px-1 mb-4">
+        <div class="px-1 mb-2">
           <h2 class="mb-0">Erfahrung</h2>
           <div class="dropdown-divider pt-0"></div>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua.
-          </p>
+          <div *ngIf="isSteve">
+            <p>
+              <fa-icon [icon]="['fas', 'hand-point-right']" class="mr-1"></fa-icon>
+              App-Entwickler (Desktop - Windows)
+            </p>
+            <p>
+              <fa-icon [icon]="['fas', 'hand-point-right']" class="mr-1 text-white"></fa-icon>
+              WebAppentwickler (Php - YII2)
+            </p>
+            <p>
+              <fa-icon [icon]="['fas', 'hand-point-right']" class="mr-1 text-white"></fa-icon>
+              Webentwickler (Php - Wordpress)
+            </p>
+          </div>
+          <div *ngIf="!isSteve">
+            <p>
+              <fa-icon [icon]="['fas', 'hand-point-right']" class="mr-1"></fa-icon>
+              Webentwickler (Wartung, Fehlerbehebung und Verbesserung von Websites)
+            </p>
+          </div>
         </div>
         <div class="px-1 mb-4">
           <h2 class="mb-0">Referenzen</h2>
           <div class="dropdown-divider pt-0"></div>
-          <p>
+          <p *ngIf="isSteve">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
             dolore magna aliquyam erat, sed diam voluptua.
           </p>
-        </div>
-        <div class="px-1 mb-4">
-          <h2 class="mb-0">Teilnahme an Konferenzen, Kursen und Workshops</h2>
-          <div class="dropdown-divider pt-0"></div>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua.
+          <p *ngIf="!isSteve">
+            TH Brandenburg, Vivantes, Brücke e.v
           </p>
         </div>
         <div class="px-1">
           <h2 class="mb-0">Hobby</h2>
           <div class="dropdown-divider pt-0"></div>
-          <ul class="">
+          <ul class="p-0">
             <li>Fußball</li>
             <li>Lesen</li>
-            <li>Reisen</li>
+            <li *ngIf="isSteve">Reisen</li>
           </ul>
         </div>
       </div>
@@ -167,12 +237,18 @@
           <span class="text-black-50">Deutsch</span>
           <div class="progress">
             <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 82%;"
-              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" *ngIf="isSteve">
+            </div>
+            <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 70%;"
+              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" *ngIf="!isSteve">
+            </div>
           </div>
           <span class="text-black-50">English</span>
           <div class="progress">
             <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 70%;"
-              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" *ngIf="isSteve"></div>
+              <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%;"
+              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" *ngIf="!isSteve"></div>
           </div>
           <span class="text-black-50">Französisch</span>
           <div class="progress">
@@ -186,21 +262,38 @@
       <div class="card mt-3 mb-3 pt-2 col-md-12">
         <h2 class="font-weight-900 mb-0 pl-3">Fähigkeiten</h2>
         <div class="dropdown-divider mt-0"></div>
-        <div class="card-body pt-1">
-          <span class="text-black-50">Assiduté</span>
+        <div class="card-body pt-1" *ngIf="isSteve">
+          <span class="text-black-50">innovativ</span>
           <div class="progress">
             <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 92%;"
-              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">92%</div>
+              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-          <span class="text-black-50">entreprendre</span>
+          <span class="text-black-50">fleißig</span>
           <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 40%;"
-              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40%</div>
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 97%;"
+              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-          <span class="text-black-50">Angular</span>
+          <span class="text-black-50">Problemlöser</span>
           <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 55%;"
-              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">55%</div>
+            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 95%;"
+              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="card-body pt-1" *ngIf="!isSteve">
+          <span class="text-black-50">innovativ</span>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 50%;"
+              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <span class="text-black-50">fleißig</span>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%;"
+              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <span class="text-black-50">Problemlöser</span>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 60%;"
+              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         </div>
       </div>

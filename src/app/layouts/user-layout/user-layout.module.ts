@@ -2,12 +2,26 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDividerModule } from '@angular/material/divider';
 import { CommonModule } from '@angular/common';
+
 import {
   FontAwesomeModule,
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
-import { faCheckCircle, faUserCircle, faStar, faPlay, faMessage } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCheckCircle,
+  faUserCircle,
+  faStar,
+  faPlay,
+  faMessage,
+  faGraduationCap,
+  faCalendar,
+  faMapMarker,
+  faUniversity,
+  faHandPointRight
+} from '@fortawesome/free-solid-svg-icons';
+
 import {
   faCheckCircle as farCheckCircle
 } from '@fortawesome/free-regular-svg-icons';
@@ -44,6 +58,7 @@ import { ContactComponent } from 'src/app/pages/contact/contact.component';
     ReactiveFormsModule,
     ComponentsModule,
     FontAwesomeModule,
+    MatDividerModule
   ],
 })
 export class UserLayoutModule {
@@ -60,7 +75,12 @@ export class UserLayoutModule {
       faMessage,
       faFacebook,
       faFacebookMessenger,
-      faTwitter
+      faTwitter,
+      faGraduationCap,
+      faCalendar,
+      faUniversity,
+      faMapMarker,
+      faHandPointRight
     );
   }
 }

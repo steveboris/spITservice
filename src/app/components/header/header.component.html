@@ -1,9 +1,9 @@
 <!--part of this code is from bootstrap navbar component-->
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="/">
     <div class="d-flex">
-      <img class="rounded-circle" width="50px" height="45px" src="../../../assets/img/logo-t.png" alt="img">
-      <h2 class="my-auto ml-2">S&P IT-Service</h2>
+      <img class="rounded-circle" width="50px" height="45px" src="../../../assets/img/brand.png" alt="img">
+      <h2 class="my-auto ml-2 brandname font-weight-800">S&P ITservice</h2>
     </div>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
@@ -37,13 +37,36 @@
       <li class="nav-item {{links[3] ? 'active' : ''}}">
         <a class="nav-link" href="/contacts" (click)="setActiveClass(3)">Kontakte</a>
       </li>
-      <li class="nav-item consulting bg-primary">
-        <a class="nav-link text-white font-weight-800">GET CONSULTING</a>
+      <li class="nav-item consulting bg-primary" (click)="startVideoCall(videocall)">
+        <a class="nav-link text-white font-weight-800">
+          <fa-icon [icon]="['fas', 'video-camera']" class="mr-1 text-white"></fa-icon>
+          GET CONSULTING
+        </a>
       </li>
     </ul>
   </div>
-  <form class="form-inline my-2 my-lg-0" *ngIf="!hide">
-    <button class="btn btn-sm btn-primary btn-animate my-2 my-sm-0 font-weight-800" type="submit">Get
-      consulting</button>
-  </form>
+  <div class="call my-2 my-lg-0" *ngIf="!hide">
+    <button class="btn btn-sm btn-primary btn-animate my-2 my-sm-0 font-weight-800"
+      (click)="startVideoCall(videocall)">
+      <fa-icon [icon]="['fas', 'video-camera']" class="mr-1 text-white"></fa-icon>
+      Get consulting
+    </button>
+  </div>
 </nav>
+
+<ng-template #videocall>
+  <h1 mat-dialog-title>Sich beraten lassen</h1>
+  <mat-divider></mat-divider>
+  <div mat-dialog-content>
+    <strong>Wir bitten Sie um Geduld. Wir sind gleich für Sie da.</strong><br><br>
+    Damit Sie nicht lange in der Warteschleife warten müssen, bis einer unserer Experten Ihres Anliegen bearbeiten kann,
+    ist es ratsam, vorher einen Termin zu vereinbaren. Wenn Sie noch keinen Termin vereinbart haben,
+    nutzen Sie bitte unser <a class="text-primary" [routerLink]="['contacts']"
+      mat-dialog-close (click)="setActiveClass(3)"><strong>Kontaktformular</strong></a>.<br/>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="justify-content-end" mat-dialog-actions>
+    <button mat-raised-button color="primary" mat-dialog-close (click)="openJitsi()">Starten</button>
+    <button mat-raised-button color="accent" mat-dialog-close>Abbrechen</button>
+  </div>
+</ng-template>

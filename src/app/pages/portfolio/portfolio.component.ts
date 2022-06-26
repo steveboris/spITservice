@@ -37,7 +37,7 @@ export class PortfolioComponent implements OnInit {
     {
       degree: 'Bachelor',
       university: 'Technische Hochschule Brandenburg',
-      date: '10/2021',
+      date: '01/2022',
       location: 'Brandenburg'
     }
   ];

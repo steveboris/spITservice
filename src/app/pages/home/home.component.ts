@@ -48,12 +48,12 @@ export class HomeComponent implements OnInit {
   };
 
   public user2: User = {
-    picture: '../../../assets/img/user.png',
+    picture: '../../../assets/avatar/pascal.png',
     name: 'PASCAL NANSSE',
     job: 'CO-FOUNDER',
     description:
-      'Ich bin IT Berater (Hardware, Software) und helfen' +
-      'ihnen auch bei der Digitalisierung und Automatisierung von Geschäftsprozessen.',
+      'Ich bin Softwareentwickler mit mehr als 4 Jahren Erfahrung.' +
+      ' Als leidenschaftlicher Informatiker habe ich gelernt, in verschiedenen Programmiersprachen zu kodieren (Java, Javascript, PHP, AngularJS...)',
     github: {
       text: 'Github',
       link: 'https://github.com/pascalnansse'
@@ -100,17 +100,17 @@ export class HomeComponent implements OnInit {
   feedbacks = [
     {
       name: "Robert Kanga",
-      text: 'Professioneller service von Anfang bis zum Ende und hoher Qualität. Dankee nochmals S&P IT-Service',
+      text: 'Professioneller Service von Anfang bis zum Endeund von hoher Qualität; Danke nochmalsIT-Service.',
       stern: 4
     },
     {
-      name: "Robert Kanga",
-      text: 'Professioneller service von Anfang bis zum Ende und hoher Qualität. Dankee nochmals S&P IT-Service',
+      name: "Frederic dollaire",
+      text: 'Ich habe schon mehrmals von Ihnen und Ihren Diensten gehört. Ihre Dienste sind wirklich gut und die Ergebnisse werden von allen geschätzt.',
       stern: 3
     },
     {
-      name: "Robert Kanga",
-      text: 'Professioneller service von Anfang bis zum Ende und hoher Qualität. Dankee nochmals S&P IT-Service',
+      name: "Eveline schmith",
+      text: 'Ich möchte mich bei Ihnen aufrichtig für die Professionalität Gründlichkeit bedanke, die Sie und Ihr Team an den Tag gelegt haben.',
       stern: 5
     },
     /*{

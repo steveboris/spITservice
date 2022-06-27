@@ -11,6 +11,5 @@ export const UserLayoutRoutes: Routes = [
   { path: 'services/:name', component: ServicesComponent },
   { path: 'profile/:user', component: PortfolioComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: 'contacts', component: ContactComponent },
-  {path: '**', redirectTo: 'home', pathMatch: 'full'}
+  { path: 'contacts', component: ContactComponent }
 ];

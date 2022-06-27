@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   public profiles:User[];
 
   public user1: User = {
-    picture: '../../../assets/avatar/steve.png',
+    picture: 'assets/avatar/steve.png',
     name: 'STEVE BORIS',
     job: 'CO-FOUNDER',
     description:
@@ -43,12 +43,12 @@ export class HomeComponent implements OnInit {
     },
     portfolio:{
       text: 'Über mich',
-      link: '/profile/steve-boris'
+      link: '#/profile/steve-boris'
     }
   };
 
   public user2: User = {
-    picture: '../../../assets/avatar/pascal.png',
+    picture: 'assets/avatar/pascal.png',
     name: 'PASCAL NANSSE',
     job: 'CO-FOUNDER',
     description:
@@ -64,35 +64,35 @@ export class HomeComponent implements OnInit {
     },
     portfolio:{
       text: 'Über mich',
-      link: '/profile/pascal-nansse'
+      link: '#/profile/pascal-nansse'
     }
   };
 
   /**What we do */
   public cards = [
     {
-      img: '../../../assets/img/development.png',
+      img: 'assets/img/development.png',
       title: 'Softwareentwicklung',
       text: 'Wir entwickeln qualitativ hochwertige Anwendungen, die den neuen Technologien entsprechen.',
-      link: 'services/software'
+      link: '#/services/software'
     },
     {
-      img: '../../../assets/img/web-design.png',
+      img: 'assets/img/web-design.png',
       title: 'Webentwicklung',
       text: 'Wir haben uns gute Kenntnisse über die Erstellung von Websites angeeignet.',
-      link: 'services/website'
+      link: '#/services/website'
     },
     {
-      img: '../../../assets/img/computer.png',
+      img: 'assets/img/computer.png',
       title: 'IT Sicherheit',
       text: 'Die Sicherung von Informationen ist ein ernst zu nehmender Aspekt.',
       link: '#'
     },
     {
-      img: '../../../assets/img/video-call.png',
+      img: 'assets/img/video-call.png',
       title: 'Consulting',
       text: 'Wenn Sie Rat brauchen, um Ihre IT-Infrastruktur zu erstellen, sind wir für Sie da.',
-      link: 'services/consulting'
+      link: '#/services/consulting'
     }
   ]
 

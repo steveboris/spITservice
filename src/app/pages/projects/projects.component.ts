@@ -9,7 +9,7 @@ export class ProjectsComponent implements OnInit {
 
   projects = [
     {
-      img: '../../../assets/img/web-link.png',
+      img: 'assets/img/web-link.png',
       title: 'Pawlo Masoso e.V',
       text: 'PAWLO-Masoso e.V. ist eine panafrikanische Frauenorganisation.'
             + 'Ziel des Projekts ist, Kinder, Jungendliche und junge Erwachsene zu begleiten um ihnen eine erfolgreiche Schulzeit, '
@@ -18,7 +18,7 @@ export class ProjectsComponent implements OnInit {
       tech: 'PHP - Wordpress'
     },
     {
-      img: '../../../assets/img/sport-car.png',
+      img: 'assets/img/sport-car.png',
       title: 'Car Rental',
       text: 'Car rental ist eine Webanwendung für den Online-Verkauf von Fahrzeugen. '
             + 'Kunden können die Suche nach Datum oder Marke filtern und Online-Reservierungen vornehmen. '
@@ -27,7 +27,7 @@ export class ProjectsComponent implements OnInit {
       tech: 'NodeJs'
     },
     {
-      img: '../../../assets/img/web-link.png',
+      img: 'assets/img/web-link.png',
       title: 'ABC INTER',
       text: 'ABCINTER  ist ein Startup, das sich auf die Verwaltung von Paketsendungen spezialisiert hat.'
             + 'Die Webanwendung bietet Managern die Möglichkeit, relevante Informationen zu speichern und Nutzern die Möglichkeit, '
@@ -36,7 +36,7 @@ export class ProjectsComponent implements OnInit {
       tech: 'PHP - Wordpress'
     },
     {
-      img: '../../../assets/img/icecream.png',
+      img: 'assets/img/icecream.png',
       title: 'Ice Cream',
       text: 'Das Projekt stammt aus dem Beispiel von Martin Fowler. Die Aufgabe besteht dahin '
             + 'eine Benutzerüberfläche zu erstellen, die zur Berechnung der Eiscreme-Partikel in der Atmosphäre dienen soll.',

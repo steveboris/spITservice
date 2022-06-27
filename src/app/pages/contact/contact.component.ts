@@ -9,12 +9,12 @@ export class ContactComponent implements OnInit {
 
   contatcs = [
     {
-      icon: '../../../assets/img/location.png',
+      icon: 'assets/img/location.png',
       title: 'Standort',
       subtitle: 'straße 2, 12222 Berlin'
     },
     {
-      icon: '../../../assets/img/call.png',
+      icon: 'assets/img/call.png',
       title: 'Phone:',
       subtitle: '+49 15xxx xxxxx'
     }

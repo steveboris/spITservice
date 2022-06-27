@@ -23,14 +23,12 @@ export class ServicesComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   checkServiceName() {
     // if there is no servicename than redirect to home
     if (this.serviceName == null) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['.']);
     }
 
     if (this.serviceName?.toLowerCase() == 'software') {
@@ -40,7 +38,7 @@ export class ServicesComponent implements OnInit {
     } else if (this.serviceName?.toLowerCase() == 'consulting') {
       this.isConsulting = true;
     } else {
-      this.router.navigate(['/home']);
+      this.router.navigate(['.']);
     }
   }
 
@@ -49,19 +47,19 @@ export class ServicesComponent implements OnInit {
       this.isSoftware = true;
       this.isWebsite = false;
       this.isConsulting = false;
-      this.router.navigate(['/services/software']);
+      this.router.navigate(['services/software']);
     } else if (url == 'website') {
       this.isWebsite = true;
       this.isSoftware = false;
       this.isConsulting = false;
-      this.router.navigate(['/services/website']);
+      this.router.navigate(['services/website']);
     } else if (url == 'consulting') {
       this.isConsulting = true;
       this.isWebsite = false;
       this.isSoftware = false;
-      this.router.navigate(['/services/consulting']);
+      this.router.navigate(['services/consulting']);
     } else {
-      this.router.navigate(['/home']);
+      this.router.navigate(['.']);
     }
   }
 }

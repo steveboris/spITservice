@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { MatDialog } from "@angular/material/dialog";
 
@@ -14,7 +15,10 @@ export class HeaderComponent implements OnInit {
   // each position correspond to each link. Help to know when to add the class "active"
   links = [false, false, false, false];
 
-  constructor(private modalDialog: MatDialog) {
+  constructor(
+    private modalDialog: MatDialog,
+    private router: Router
+  ) {
     this.screenSize = window.innerWidth;
   }
 
@@ -49,5 +53,9 @@ export class HeaderComponent implements OnInit {
   openJitsi() {
     const url = 'https://meet.jit.si/spITservice';
     window.open(url, '_blank');
+  }
+
+  changeRouteTo(url: string) {
+    this.router.navigate(['services/', url]).then(() => window.location.reload());
   }
 }
